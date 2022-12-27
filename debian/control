@@ -1,0 +1,32 @@
+Source: libref-util-xs-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 10),
+               libreadonly-perl,
+               perl
+Standards-Version: 4.1.3
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libref-util-xs-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libref-util-xs-perl.git
+Homepage: https://metacpan.org/release/Ref-Util-XS
+
+Package: libref-util-xs-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends}
+Enhances: libref-util-perl
+Description: XS implementation for Ref::Util
+ Ref::Util::XS is the XS implementation of Ref::Util, which provides several
+ functions to help identify references in a more convenient way than the usual
+ approach of examining the return value of ref.
+ .
+ You should use Ref::Util::XS by installing Ref::Util itself (packaged as
+ libref-util-perl): If the system doesn't have Recommends turned off, you will
+ get libref-util-xs-perl automatically. Ref::Util::XS will be used
+ automatically, providing a significant speed boost to everything that uses
+ Ref::Util.
+ .
+ See Ref::Util for full documentation of the available functions.
